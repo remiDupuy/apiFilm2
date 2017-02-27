@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="Client.View.ComptePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Client.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Compte, Source={StaticResource Locator}}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Margin="0" Orientation="Vertical" Padding="20dp">
+            <StackPanel Width="284" VerticalAlignment="Top" Orientation="Horizontal">
+                <TextBlock x:Name="lblMail" Text="Mail : " VerticalAlignment="Center" Margin="0,0,20,0"/>
+                <TextBox x:Name="txtMail1" Text="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="111" Margin="0,0,20,0"/>
+                <Button x:Name="btnMail" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="96" Content="Rechercher" Command="{Binding BtnRechercher}"/>
+            </StackPanel>
+            
+            
+
+        </StackPanel>
+
+
+    </Grid>
+</Page>
