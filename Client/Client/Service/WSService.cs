@@ -40,6 +40,33 @@ namespace Client.Service
             return model;
         }
 
+        public async Task<Boolean> putCompte(T_E_COMPTE_CPT updateCompte)
+        {
+
+            var stringContent = new StringContent(JsonConvert.SerializeObject(updateCompte), Encoding.UTF8, "application/json");
+            var response = await client.PutAsync("http://localhost:3124/api/compte/" + updateCompte.CPT_ID, stringContent);
+            return response.IsSuccessStatusCode;
+            
+        }
+
+        public async Task<Boolean> createCompte(T_E_COMPTE_CPT createdComtpe)
+        {
+
+            var stringContent = new StringContent(JsonConvert.SerializeObject(createdComtpe), Encoding.UTF8, "application/json");
+            var response = await client.PostAsync("http://localhost:3124/api/compte", stringContent);
+            return response.IsSuccessStatusCode;
+
+        }
+
+        public async Task<Rootobject> getCoordonnees(String rue, String cp, String ville)
+        {
+            Rootobject model = null;
+            var task = await client.GetAsync("http://dev.virtualearth.net/REST/v1/Locations/FR/" + cp + "/" + ville + "/" + rue + "?key=AvwYogeHamJ_OUE_uJTXJHmBcDkmNcs2mryb2mpdOKGCCLU8sb_0Bf3BorGBVk LN");
+            var jsonString = await task.Content.ReadAsStringAsync();
+            model = JsonConvert.DeserializeObject<Rootobject>(jsonString);
+            return model;
+        }
+
     }
 }
-}
+

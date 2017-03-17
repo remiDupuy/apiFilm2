@@ -22,11 +22,13 @@ namespace Client.ViewModel
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<CompteViewModel>();
+            SimpleIoc.Default.Register<AjoutCompteViewModel>();
         }
         /// <summary>
         /// Gets the Main property.
         /// </summary>
         public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
         public CompteViewModel Compte => ServiceLocator.Current.GetInstance<CompteViewModel>();
+        public AjoutCompteViewModel AjoutCompte => ServiceLocator.Current.GetInstance<AjoutCompteViewModel>();
     }
 }

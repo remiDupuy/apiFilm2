@@ -132,33 +132,39 @@ namespace Client.Client_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[12];
+            _typeNameTable = new string[15];
             _typeNameTable[0] = "Client.ViewModel.ViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "Client.ViewModel.MainViewModel";
             _typeNameTable[3] = "GalaSoft.MvvmLight.ViewModelBase";
             _typeNameTable[4] = "GalaSoft.MvvmLight.ObservableObject";
-            _typeNameTable[5] = "Client.View.ComptePage";
-            _typeNameTable[6] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[7] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[8] = "Client.View.Films";
-            _typeNameTable[9] = "Client.View.OptionsPage";
-            _typeNameTable[10] = "Client.View.RootPage";
-            _typeNameTable[11] = "Client.View.MainPage";
+            _typeNameTable[5] = "Client.ViewModel.CompteViewModel";
+            _typeNameTable[6] = "Client.ViewModel.AjoutCompteViewModel";
+            _typeNameTable[7] = "Client.View.AjoutCompte";
+            _typeNameTable[8] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[9] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[10] = "Client.View.ComptePage";
+            _typeNameTable[11] = "Client.View.Films";
+            _typeNameTable[12] = "Client.View.OptionsPage";
+            _typeNameTable[13] = "Client.View.RootPage";
+            _typeNameTable[14] = "Client.View.MainPage";
 
-            _typeTable = new global::System.Type[12];
+            _typeTable = new global::System.Type[15];
             _typeTable[0] = typeof(global::Client.ViewModel.ViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::Client.ViewModel.MainViewModel);
             _typeTable[3] = typeof(global::GalaSoft.MvvmLight.ViewModelBase);
             _typeTable[4] = typeof(global::GalaSoft.MvvmLight.ObservableObject);
-            _typeTable[5] = typeof(global::Client.View.ComptePage);
-            _typeTable[6] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[8] = typeof(global::Client.View.Films);
-            _typeTable[9] = typeof(global::Client.View.OptionsPage);
-            _typeTable[10] = typeof(global::Client.View.RootPage);
-            _typeTable[11] = typeof(global::Client.View.MainPage);
+            _typeTable[5] = typeof(global::Client.ViewModel.CompteViewModel);
+            _typeTable[6] = typeof(global::Client.ViewModel.AjoutCompteViewModel);
+            _typeTable[7] = typeof(global::Client.View.AjoutCompte);
+            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[9] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[10] = typeof(global::Client.View.ComptePage);
+            _typeTable[11] = typeof(global::Client.View.Films);
+            _typeTable[12] = typeof(global::Client.View.OptionsPage);
+            _typeTable[13] = typeof(global::Client.View.RootPage);
+            _typeTable[14] = typeof(global::Client.View.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -196,10 +202,13 @@ namespace Client.Client_XamlTypeInfo
         private object Activate_0_ViewModelLocator() { return new global::Client.ViewModel.ViewModelLocator(); }
         private object Activate_2_MainViewModel() { return new global::Client.ViewModel.MainViewModel(); }
         private object Activate_4_ObservableObject() { return new global::GalaSoft.MvvmLight.ObservableObject(); }
-        private object Activate_5_ComptePage() { return new global::Client.View.ComptePage(); }
-        private object Activate_8_Films() { return new global::Client.View.Films(); }
-        private object Activate_9_OptionsPage() { return new global::Client.View.OptionsPage(); }
-        private object Activate_11_MainPage() { return new global::Client.View.MainPage(); }
+        private object Activate_5_CompteViewModel() { return new global::Client.ViewModel.CompteViewModel(); }
+        private object Activate_6_AjoutCompteViewModel() { return new global::Client.ViewModel.AjoutCompteViewModel(); }
+        private object Activate_7_AjoutCompte() { return new global::Client.View.AjoutCompte(); }
+        private object Activate_10_ComptePage() { return new global::Client.View.ComptePage(); }
+        private object Activate_11_Films() { return new global::Client.View.Films(); }
+        private object Activate_12_OptionsPage() { return new global::Client.View.OptionsPage(); }
+        private object Activate_14_MainPage() { return new global::Client.View.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -215,6 +224,8 @@ namespace Client.Client_XamlTypeInfo
                 userType = new global::Client.Client_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_0_ViewModelLocator;
                 userType.AddMemberName("Main");
+                userType.AddMemberName("Compte");
+                userType.AddMemberName("AjoutCompte");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -241,44 +252,65 @@ namespace Client.Client_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 5:   //  Client.View.ComptePage
-                userType = new global::Client.Client_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_ComptePage;
+            case 5:   //  Client.ViewModel.CompteViewModel
+                userType = new global::Client.Client_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  Windows.UI.Xaml.Controls.Page
+            case 6:   //  Client.ViewModel.AjoutCompteViewModel
+                userType = new global::Client.Client_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  Client.View.AjoutCompte
+                userType = new global::Client.Client_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_AjoutCompte;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::Client.Client_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 7:   //  Windows.UI.Xaml.Controls.UserControl
+            case 9:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::Client.Client_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 8:   //  Client.View.Films
+            case 10:   //  Client.View.ComptePage
                 userType = new global::Client.Client_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_Films;
+                userType.Activator = Activate_10_ComptePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  Client.View.OptionsPage
+            case 11:   //  Client.View.Films
                 userType = new global::Client.Client_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_OptionsPage;
+                userType.Activator = Activate_11_Films;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  Client.View.RootPage
+            case 12:   //  Client.View.OptionsPage
+                userType = new global::Client.Client_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_12_OptionsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  Client.View.RootPage
                 userType = new global::Client.Client_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  Client.View.MainPage
+            case 14:   //  Client.View.MainPage
                 userType = new global::Client.Client_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_MainPage;
+                userType.Activator = Activate_14_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -292,6 +324,16 @@ namespace Client.Client_XamlTypeInfo
             var that = (global::Client.ViewModel.ViewModelLocator)instance;
             return that.Main;
         }
+        private object get_1_ViewModelLocator_Compte(object instance)
+        {
+            var that = (global::Client.ViewModel.ViewModelLocator)instance;
+            return that.Compte;
+        }
+        private object get_2_ViewModelLocator_AjoutCompte(object instance)
+        {
+            var that = (global::Client.ViewModel.ViewModelLocator)instance;
+            return that.AjoutCompte;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -304,6 +346,18 @@ namespace Client.Client_XamlTypeInfo
                 userType = (global::Client.Client_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Client.ViewModel.ViewModelLocator");
                 xamlMember = new global::Client.Client_XamlTypeInfo.XamlMember(this, "Main", "Client.ViewModel.MainViewModel");
                 xamlMember.Getter = get_0_ViewModelLocator_Main;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Client.ViewModel.ViewModelLocator.Compte":
+                userType = (global::Client.Client_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Client.ViewModel.ViewModelLocator");
+                xamlMember = new global::Client.Client_XamlTypeInfo.XamlMember(this, "Compte", "Client.ViewModel.CompteViewModel");
+                xamlMember.Getter = get_1_ViewModelLocator_Compte;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Client.ViewModel.ViewModelLocator.AjoutCompte":
+                userType = (global::Client.Client_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Client.ViewModel.ViewModelLocator");
+                xamlMember = new global::Client.Client_XamlTypeInfo.XamlMember(this, "AjoutCompte", "Client.ViewModel.AjoutCompteViewModel");
+                xamlMember.Getter = get_2_ViewModelLocator_AjoutCompte;
                 xamlMember.SetIsReadOnly();
                 break;
             }

@@ -22,10 +22,12 @@ namespace Client.View
     /// </summary>
     public sealed partial class RootPage : Page
     {
+        public static SplitView mySplitView;
         public RootPage(Frame frame)
         {
             this.InitializeComponent();
-            this.MySplitView.Content = frame;
+            mySplitView = this.MySplitView;
+            mySplitView.Content = frame;
             (MySplitView.Content as Frame).Navigate(typeof(MainPage));
         }
 

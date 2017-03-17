@@ -95,13 +95,19 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Rootobject.cs" />
     <Compile Include="Model\T_E_AVIS_AVI.cs" />
     <Compile Include="Model\T_E_COMPTE_CPT.cs" />
     <Compile Include="Model\T_E_FILM_FLM.cs" />
+    <Compile Include="Service\Hash.cs" />
     <Compile Include="Service\WSService.cs" />
+    <Compile Include="ViewModel\AjoutCompteViewModel.cs" />
     <Compile Include="ViewModel\CompteViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\AjoutCompte.xaml.cs">
+      <DependentUpon>AjoutCompte.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ComptePage.xaml.cs">
       <DependentUpon>ComptePage.xaml</DependentUpon>
     </Compile>
@@ -140,6 +146,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\AjoutCompte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ComptePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

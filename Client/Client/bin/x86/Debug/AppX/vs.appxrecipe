@@ -28,13 +28,13 @@
     <AppXManifest Include="D:\Films\Client\Client\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-02-27T16:22:33.700</Modified>
+      <Modified>2017-03-17T10:21:58.824</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Films\Client\Client\bin\x86\Debug\Client.exe">
       <PackagePath>entrypoint\Client.exe</PackagePath>
-      <Modified>2017-02-27T16:22:33.072</Modified>
+      <Modified>2017-03-17T10:21:57.961</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dupuyr\.nuget\packages\CommonServiceLocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
@@ -111,6 +111,10 @@
     <AppxPackagedFile Include="C:\Users\dupuyr\.nuget\packages\MvvmLightLibs\5.3.0\lib\windows81\GalaSoft.MvvmLight.dll">
       <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
       <Modified>2016-04-22T14:28:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dupuyr\.nuget\packages\Newtonsoft.Json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2016-06-13T21:06:14.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dupuyr\.nuget\packages\runtime.any.System.Private.DataContractSerialization\4.1.0\lib\netcore50\System.Private.DataContractSerialization.dll">
       <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
@@ -504,7 +508,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Films\Client\Client\bin\x86\Debug\Client.xr.xml">
       <PackagePath>Client.xr.xml</PackagePath>
-      <Modified>2017-02-27T16:22:32.890</Modified>
+      <Modified>2017-03-17T09:42:45.815</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -512,11 +516,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Films\Client\Client\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2017-02-27T16:22:33.507</Modified>
+      <Modified>2017-03-17T10:21:58.535</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Films\Client\Client\bin\x86\Debug\Core\Client.exe">
       <PackagePath>Client.exe</PackagePath>
-      <Modified>2017-02-27T16:22:33.699</Modified>
+      <Modified>2017-03-17T10:21:58.821</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

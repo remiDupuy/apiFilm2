@@ -223,3 +223,9 @@ D:\Films\Client\Client\obj\x86\Debug\View\OptionsPage.xaml
 D:\Films\Client\Client\obj\x86\Debug\View\ComptePage.xbf
 D:\Films\Client\Client\obj\x86\Debug\View\Films.xbf
 D:\Films\Client\Client\obj\x86\Debug\View\OptionsPage.xbf
+D:\Films\Client\Client\bin\x86\Debug\Newtonsoft.Json.dll
+D:\Films\Client\Client\bin\x86\Debug\View\AjoutCompte.xbf
+D:\Films\Client\Client\obj\x86\Debug\View\AjoutCompte.g.i.cs
+D:\Films\Client\Client\obj\x86\Debug\View\AjoutCompte.g.cs
+D:\Films\Client\Client\obj\x86\Debug\View\AjoutCompte.xaml
+D:\Films\Client\Client\obj\x86\Debug\View\AjoutCompte.xbf

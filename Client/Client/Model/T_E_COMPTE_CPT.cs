@@ -12,6 +12,7 @@ namespace Client.Model
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Net.Http;
 
     public partial class T_E_COMPTE_CPT
     {
@@ -32,6 +33,12 @@ namespace Client.Model
         public string CPT_CP { get; set; }
         public string CPT_VILLE { get; set; }
         public string CPT_PAYS { get; set; }
+
+        public static explicit operator HttpContent(T_E_COMPTE_CPT v)
+        {
+            throw new NotImplementedException();
+        }
+
         public Nullable<float> CPT_LATITUDE { get; set; }
         public Nullable<float> CPT_LONGITUDE { get; set; }
     

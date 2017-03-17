@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="Client.View.AjoutCompte"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Client.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding AjoutCompte, Source={StaticResource Locator}}">
+
+    <Page.BottomAppBar>
+
+        <CommandBar x:ConnectionId='1' x:Name="AppCommandBar" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" HorizontalAlignment="Center">
+            <AppBarButton x:ConnectionId='2' x:Name="Save" Icon="Save" Label="Save" Command="{Binding BtnSaveAjoutCompteCommand}"/>
+            <AppBarButton x:ConnectionId='3' x:Name="Clear" Icon="ClearSelection" Label="Clear" Command="{Binding BtnClearAjoutCompteCommand}"/>
+        </CommandBar>
+
+    </Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Margin="0" Orientation="Vertical" HorizontalAlignment="Center">
+            <TextBlock x:ConnectionId='4' x:Name="textBlock" TextWrapping="Wrap" Text="Ajout compte" FontSize="40" Foreground="#FFEC0606"/>
+            <TextBlock x:ConnectionId='5' x:Name="textBlockNom" TextWrapping="Wrap" Text="Nom" HorizontalAlignment="Center"/>
+
+
+
+            <TextBox x:ConnectionId='6' x:Name="txtNom" TextWrapping="Wrap" Text="{Binding Compte.CPT_NOM, Mode=TwoWay}" Margin="0" HorizontalAlignment="Center" Width="216"/>
+            <TextBlock x:ConnectionId='7' x:Name="textBlockPrenom" TextWrapping="Wrap" Text="Prénom" HorizontalAlignment="Center"/>
+            <TextBox x:ConnectionId='8' x:Name="txtPrenom" TextWrapping="Wrap" Text="{Binding Compte.CPT_PRENOM, Mode=TwoWay}" Margin="0" HorizontalAlignment="Center" Width="218"/>
+            <TextBlock x:ConnectionId='9' x:Name="textBlock_Copy1" TextWrapping="Wrap" Text="Portable" HorizontalAlignment="Center"/>
+            <TextBox x:ConnectionId='10' x:Name="txtPort" TextWrapping="Wrap" Text="{Binding Compte.CPT_TELPORTABLE, Mode=TwoWay}" Margin="0" HorizontalAlignment="Center" Width="218"/>
+            <TextBlock x:ConnectionId='11' x:Name="textBlock_Copy2" TextWrapping="Wrap" Text="Mail" HorizontalAlignment="Center"/>
+            <TextBox x:ConnectionId='12' x:Name="txtMail" TextWrapping="Wrap" Text="{Binding Compte.CPT_MEL, Mode=TwoWay}" Margin="0" HorizontalAlignment="Center" Width="218"/>
+            <TextBlock x:ConnectionId='13' x:Name="textBlockMdp" TextWrapping="Wrap" Text="Mot de passe" HorizontalAlignment="Center"/>
+            <PasswordBox x:ConnectionId='14' x:Name="txtMdp" Password="{Binding Compte.CPT_PWD, Mode=TwoWay}" Margin="0" HorizontalAlignment="Center" Width="218"/>
+            <TextBlock x:ConnectionId='15' x:Name="textBlock_Copy" TextWrapping="Wrap" Text="Adresse (Rue, CP, Ville, Pays)" Margin="83,0,58,0" HorizontalAlignment="Center"/>
+            <TextBox x:ConnectionId='16' x:Name="txtRue" TextWrapping="Wrap" Text="{Binding Compte.CPT_RUE, Mode=TwoWay}" Margin="-2,0,0,0" HorizontalAlignment="Center" Width="218"/>
+            <TextBox x:ConnectionId='17' x:Name="txtCp" TextWrapping="Wrap" Text="{Binding Compte.CPT_CP, Mode=TwoWay}" Margin="131.5,0" HorizontalAlignment="Center" Width="97"/>
+            <TextBox x:ConnectionId='18' x:Name="txtVille" TextWrapping="Wrap" Text="{Binding Compte.CPT_VILLE, Mode=TwoWay}" Margin="0" HorizontalAlignment="Center" Width="154"/>
+            <TextBox x:ConnectionId='19' x:Name="txtPays" TextWrapping="Wrap" Text="{Binding Compte.CPT_PAYS, Mode=TwoWay}" Margin="0" HorizontalAlignment="Center" Width="156"/>
+
+
+
+        </StackPanel>
+
+    </Grid>
+</Page>
+
